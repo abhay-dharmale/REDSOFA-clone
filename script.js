@@ -37,6 +37,12 @@ ScrollTrigger.refresh();
 loco();
 
 
+let crsr = document.querySelector("#cursor")
+let main = document.querySelector("#main")
+document.addEventListener("mousemove", function(dets){
+    crsr.style.left = dets.x - 505 +"px"
+    crsr.style.top = dets.y - 30 +"px"
+})
 
 
 const marqueeText = () =>{
@@ -102,7 +108,7 @@ h1Elements.forEach(h1 => {
 textFadeEffect()
 
 
-const imageHoverEffect = () =>{
+const floatingImages = () =>{
     let section = document.querySelector(".floating-images")
     section.addEventListener("mousemove", function(details){
         document.querySelectorAll(".image").forEach((elem)=>{
@@ -115,4 +121,114 @@ const imageHoverEffect = () =>{
         })
     })
 }
-imageHoverEffect()
+floatingImages()
+
+
+const footeranime = ()=>{
+    const h1timeline = gsap.timeline();
+
+h1timeline.from(".bottom-footer h1", {
+    y: 180,
+    // opacity: 0,
+    duration: 20,
+    stagger: 5,
+    ease: "power1.easeInOut",
+});
+
+ScrollTrigger.create({
+    scrub: 1,
+    scroller: "#main",
+    trigger: ".bottom-footer", 
+    start: "top 90%", 
+    end: "top 75%", 
+    animation: h1timeline,
+    // markers: true, 
+});
+}
+footeranime()
+
+
+
+const firstMainAnime = () => {
+    const h1timeline = gsap.timeline();
+
+h1timeline.from(".brand-name h1", {
+    y: 580,
+    stagger: 0.05,
+    ease: "power1.easeInOut",
+});
+
+gsap.from(".first-main", {
+    y: 800,
+    duration: 0.6,
+})
+
+gsap.from(".img-container", {
+    y: 1000,
+    duration: 0.6,
+})
+}
+firstMainAnime()
+
+const threecardsSection = () =>{
+    gsap.from(".cards", {
+        scale: 0.9,
+        y: 20,
+        ease: "power1.easeInOut",
+        duration: 1,
+        scrollTrigger: {
+            scroller: "#main",
+            trigger: ".cards-section",
+            start: "top 80%",
+            end: "top 60%",
+            scrub:true
+        }
+    })
+}
+threecardsSection()
+
+
+const fifthPageAnime = () =>{
+    const h1timeline = gsap.timeline();
+
+h1timeline.from(".top-text h1", {
+    y: 200,
+    // opacity: 0,
+    duration: 10,
+    stagger: 5,
+    ease: "power1.easeInOut",
+});
+h1timeline.from(".bottom-text h1", {
+    y: 100,
+    opacity: 0,
+    duration: 10,
+    stagger: 1,
+    ease: "power1.easeInOut",
+});
+
+ScrollTrigger.create({
+    scrub: 2,
+    scroller: "#main",
+    trigger: ".fifth-page", 
+    start: "top 65%", 
+    end: "top 40%", 
+    animation: h1timeline,
+});
+}
+fifthPageAnime()
+
+
+const bigCardAnime = () => {
+    gsap.from(".big-card .card", {
+        y: 150,
+        scale: 0.5,
+        scrollTrigger: {
+            scroller: "#main",
+            trigger: ".big-card",
+            start: "top 70%",
+            end: "top 50%",
+        }
+    })
+}
+bigCardAnime()
+
