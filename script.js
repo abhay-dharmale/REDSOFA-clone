@@ -37,12 +37,30 @@ ScrollTrigger.refresh();
 loco();
 
 
-let crsr = document.querySelector("#cursor")
-let main = document.querySelector("#main")
-document.addEventListener("mousemove", function(dets){
-    crsr.style.left = dets.x - 505 +"px"
-    crsr.style.top = dets.y - 30 +"px"
-})
+
+
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: "auto",
+    centeredSlides: true,
+    spaceBetween: -30,
+    grabCursor: true,
+    loop:true,
+    effect:"slide",
+    speed: 1000,
+  });
+
+  var swiper = new Swiper(".mySwiper2", {
+    slidesPerView: 4,
+    centeredSlides: true,
+    spaceBetween: 25,
+    grabCursor: true,
+    initialSlide: 2,
+    speed: 900,
+  });
+
+
+
+
 
 
 const marqueeText = () =>{
@@ -79,7 +97,7 @@ const marqueeText = () =>{
 marqueeText()
 
 const textFadeEffect = () =>{
-    const h1Elements = document.querySelectorAll('.hoverable');
+    const h1Elements = document.querySelectorAll('.bottom-text>.hoverable');
 
 h1Elements.forEach(h1 => {
     h1.addEventListener('mouseenter', () => {
@@ -129,7 +147,6 @@ const footeranime = ()=>{
 
 h1timeline.from(".bottom-footer h1", {
     y: 180,
-    // opacity: 0,
     duration: 20,
     stagger: 5,
     ease: "power1.easeInOut",
@@ -142,7 +159,6 @@ ScrollTrigger.create({
     start: "top 90%", 
     end: "top 75%", 
     animation: h1timeline,
-    // markers: true, 
 });
 }
 footeranime()
@@ -169,6 +185,7 @@ gsap.from(".img-container", {
 })
 }
 firstMainAnime()
+
 
 const threecardsSection = () =>{
     gsap.from(".cards", {
@@ -207,11 +224,11 @@ h1timeline.from(".bottom-text h1", {
 });
 
 ScrollTrigger.create({
-    scrub: 2,
+    scrub: 4,
     scroller: "#main",
     trigger: ".fifth-page", 
     start: "top 65%", 
-    end: "top 40%", 
+    end: "top 60%", 
     animation: h1timeline,
 });
 }
