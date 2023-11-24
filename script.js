@@ -46,7 +46,7 @@ var swiper = new Swiper(".mySwiper", {
     grabCursor: true,
     loop:true,
     effect:"slide",
-    speed: 1000,
+    speed: 500,
   });
 
   var swiper = new Swiper(".mySwiper2", {
@@ -55,12 +55,8 @@ var swiper = new Swiper(".mySwiper", {
     spaceBetween: 25,
     grabCursor: true,
     initialSlide: 2,
-    speed: 900,
+    speed: 500,
   });
-
-
-
-
 
 
 const marqueeText = () =>{
@@ -125,7 +121,6 @@ h1Elements.forEach(h1 => {
 }
 textFadeEffect()
 
-
 const floatingImages = () =>{
     let section = document.querySelector(".floating-images")
     section.addEventListener("mousemove", function(details){
@@ -140,7 +135,6 @@ const floatingImages = () =>{
     })
 }
 floatingImages()
-
 
 const footeranime = ()=>{
     const h1timeline = gsap.timeline();
@@ -163,8 +157,6 @@ ScrollTrigger.create({
 }
 footeranime()
 
-
-
 const firstMainAnime = () => {
     const h1timeline = gsap.timeline();
 
@@ -186,7 +178,6 @@ gsap.from(".img-container", {
 }
 firstMainAnime()
 
-
 const threecardsSection = () =>{
     gsap.from(".cards", {
         scale: 0.9,
@@ -203,7 +194,6 @@ const threecardsSection = () =>{
     })
 }
 threecardsSection()
-
 
 const fifthPageAnime = () =>{
     const h1timeline = gsap.timeline();
@@ -233,7 +223,6 @@ ScrollTrigger.create({
 });
 }
 fifthPageAnime()
-
 
 const bigCardAnime = () => {
     gsap.from(".big-card .card", {

@@ -853,7 +853,7 @@ nav h4 {
     display: flex;
     align-items: center;
     justify-content: center;
-    height:20%;
+    height:8vh;
     width:100%;
     position:absolute;
     border-radius: 50px;
@@ -911,53 +911,51 @@ nav h4 {
 }
 
  .img1{
-    height: 32vh;
-    width: 26vw;
-    top: 2%;
-    left: 32%;
+    height: 36vh;
+    width: 23vw;
+    top: 13%;
+    right: 32%;
 }
-
-
 
 .img2{
-    height: 50vh;
+    height: 47vh;
     width: 18vw;
-    top: 58%;
-    left: 29%;
+    bottom: 39%;
+    left: 43%;
 }
 .img3{
-    height: 41vh;
+    height: 35vh;
     width: 20vw;
-    top: 57%;
-    right: 15%;
+    bottom: 6%;
+    right: 28%;
 }
 .img4{
     height: 30vh;
-    width: 25vw;
-    top: 13%;
-    right: 22%;
+    width: 29vw;
+    top: 1%;
+    right: 7%;
 }
 .img5{
-    height: 35vh;
+    height: 29vh;
     width: 25vw;
     top: 5%;
     left: 2%;
 }
 .img6{
-    height: 40vh;
-    width: 22vw;
+    height: 42vh;
+    width: 18vw;
     top: 18%;
-    left: 15%;
+    left: 19%;
 }
 .img7{
-    height: 39vh;
-    width: 23vw;
-    top: 40%;
-    right: 30%;
+    height: 30vh;
+    width: 20vw;
+    bottom: 21%;
+    left: 30%;
 }
 .img8{
-    height: 40vh;
-    width: 26vw;
+    height: 30vh;
+    width: 20vw;
     top: 45%;
     left: 10%;
 }
@@ -970,12 +968,12 @@ nav h4 {
 .img10{
     height: 40vh;
     width: 27vw;
-    top: 75%;
-    right: 20%;
+    bottom: 20%;
+    right: 7%;
 }
 .img11{
-    height: 38vh;
-    width: 27vw;
+    height: 30vh;
+    width: 23vw;
     top: 26%;
     right: 10%;
 }
