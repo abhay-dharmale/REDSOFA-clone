@@ -758,18 +758,21 @@ nav h4 {
 }
 
 .swiper-slide .last-card{
-    height: 89%;
+    height: 97%;
     background-color: #f43b3b;
     border-radius: 18px;
     transition: all ease 0.3s;
+    overflow: hidden;
+
 }
 
 .swiper-slide .last-card .top-card-sec{
+    height: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 245px;
-    overflow: visible;
+    overflow: hidden;
     padding: 2rem;
 }
 

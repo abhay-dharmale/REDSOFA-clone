@@ -41,12 +41,13 @@ loco();
 
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: "auto",
+    initialSlide: 2,
     centeredSlides: true,
-    spaceBetween: -30,
+    spaceBetween: -50,
     grabCursor: true,
     loop:true,
     effect:"slide",
-    speed: 500,
+    speed: 700,
   });
 
   var swiper = new Swiper(".mySwiper2", {
@@ -140,14 +141,14 @@ const footeranime = ()=>{
     const h1timeline = gsap.timeline();
 
 h1timeline.from(".bottom-footer h1", {
-    y: 180,
+    y: 200,
     duration: 20,
     stagger: 5,
     ease: "power1.easeInOut",
 });
 
 ScrollTrigger.create({
-    scrub: 1,
+    scrub: 2,
     scroller: "#main",
     trigger: ".bottom-footer", 
     start: "top 90%", 
